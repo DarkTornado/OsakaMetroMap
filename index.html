@@ -1,0 +1,186 @@
+<!--
+오사카메트로 노선도 벡터 이미지
+© 2024 Dark Tornado, All rights reserved.
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no width=device-width" />
+<meta name="description" content="OsakaMetro Map" />
+<title>
+OsakaMetro Map
+</title>
+</head>
+<style>
+.bold {
+  font-family: NanumSquareBold;
+}
+.left {
+  text-anchor: start;
+}
+.right {
+  text-anchor: end;
+}
+body {
+  font-family: NanumSquare;
+  margin: 0px;
+  font-size: 32px;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+polyline, polygon, line {
+  stroke-width: 15;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+circle {
+  fill: #FFFFFF;
+  stroke : #000000;
+  stroke-width: 3;
+}
+circle.exp {
+  fill: #FFFF00;
+}
+text {
+  font-size: 32px;
+}
+text.line_name {
+  font-family: NanumSquareBold;
+  font-size: 70px;
+}
+text.title {
+  text-anchor: start;
+  font-family: NanumSquareExtraBold;
+  font-size: 200px;
+}
+polygon.index {
+  stroke-width: 10px;
+}
+text.index {
+  text-anchor: start;
+  font-family: NanumSquareBold;
+  font-size: 50px;
+}
+</style>
+<body bgcolor=#FFFFFF>
+<link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+<div>
+<svg width="200%" viewBox="0 0 3000 3300" id="map">
+
+<!-- 미도스지선 -->
+<polyline points="
+    1000,100 1000,1400 1200,1600 1700,1600 1800,1700 1800,2100
+	" fill="none" stroke="#DC270B" />
+<!-- 츄오선 -->
+<polyline points="
+    100,1300 400,1000 2200,1000
+	" fill="none" stroke="#00A63D" />
+<!-- 요츠바시선 -->
+<polyline points="
+    900,700 900,900 1000,1000 900,1100 900,1200 1000,1300 1000,1400 900,1500 900,1700
+	" fill="none" stroke="#0074BE" />
+<!-- 센니치마에선 -->
+<polyline points="
+    600,800 600,900 700,1000 600,1100 600,1200 700,1300 2000,1300
+	" fill="none" stroke="#EC75A9" />
+<!-- 사카이스지선 -->
+<polyline points="
+    1400,400 1400,1700
+	" fill="none" stroke="#B34422" />
+
+</svg>
+</div>
+
+<script>
+//x,y,ko,ja,dir
+//x,y,ko,dir
+var str = `
+1000,100,센리츄오,千里中央,left
+1000,300,히가시미쿠니,江坂,left
+1000,400,신오사카,新大阪,left
+1000,500,니시나카지마미나미가타,西中島南方,left
+1000,600,나카츠,中津,left
+1000,700,우메다,梅田,left
+1000,900,요도야바시,淀屋橋,left
+1000,1000,혼마치,本町,left
+1000,1100,신사이바시,心斎橋,left
+1000,1300,난바,なんば,left
+1000,1400,다이코쿠쵸,大国町,left
+1400,1600,도부츠엔마에,動物園前,right
+1700,1600,텐노지,天王寺,left
+1800,1900,쇼와쵸,昭和町,left
+1800,2000,니시타나베,西田辺,left
+1800,2100,나가이,長居,left
+1800,2200,아비코,あびこ,left
+1800,2300,키타하나다,北花田,left
+1800,2400,신카나오카,新金岡,left
+1800,2500,나카모즈,なかもず,left
+
+100,1300,코스모스퀘어,コスモスクエア,left
+200,1200,오사카항,大阪港,left
+300,1100,아사시오바시,朝潮橋,left
+400,1000,벤텐초,弁天町,right
+500,1000,쿠조,九条,down
+700,1000,아와자,阿波座,up
+1400,1000,사카이스지혼마치,堺筋本町,left
+
+900,700,니시우메다,西梅田,right
+900,800,히고바시,肥後橋,right
+900,1200,요츠바시,四ツ橋,right
+900,1600,하나조노초,花園町,right
+900,1700,키시노사토,岸里,right
+900,1800,타마데,玉出,right
+900,1900,키타카가야,北加賀屋,right
+900,2000,스미노에코엔,肥後橋,right
+
+600,800,노다한신,野田阪神,right
+600,900,타마가와,玉川,right
+600,1100,니시나가호리,西長堀,left
+700,1300,사쿠라가와,桜川,down
+1400,1300,닛폰바시,日本橋,left
+
+1400,600,텐진바시스지로쿠초메,天神橋筋六丁目,left
+1400,700,오기마치,扇町,left
+1400,800,미나미모리마치,南森町,left
+1400,900,키타하마,北浜,left
+1400,1100,나가호리바시,長堀橋,left
+1400,1400,에비스쵸,恵美須町,left
+1400,1700,텐가차야,天下茶屋,right
+
+2000,600,세키메타카도노,関目高殿,left
+1800,600,노에우친다이,野江内代,left
+1600,600,미야코지마,都島,left
+1200,600,나카자키초,中崎町,left
+1200,700,히가시우메다,東梅田,left
+
+`.trim().split("\n");
+var map = document.getElementById("map");
+var src = '';
+str.forEach((e) => {
+if (e.trim() == '') return;
+e = e.split(',');
+var x = e[0]-0;
+var y = e[1]-0;
+var ko = e[2];
+var ja = e[3];
+var dir = e[4];
+src += '<circle cx="' + x + '" cy="' + y + '" r="11" />';
+if (dir == 'left') x += 30;
+if (dir == 'right') x -= 30;
+if (dir == 'up') y -= 50;
+if (dir == 'down') y += 50;
+if (dir == 'up' || dir == 'down') dir = 'center';
+src += '<text x=' + x + ' y=' + y + ' onClick="onTextClicked(this);" class=' + dir + '>' + ko + '</text>';
+});
+map.innerHTML += src;
+
+function onIconClicked(station) {
+alert('아이콘: ' + station);
+}
+
+function onTextClicked(element) {
+alert('글자: ' + element.innerHTML.replace(/(<([^>]+)>)/g, ''));
+}
+</script>
+</body>
+</html>
