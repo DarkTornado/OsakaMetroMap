@@ -41,17 +41,27 @@ circle {
 circle.exp {
   fill: #FFFF00;
 }
-text {
-  font-size: 32px;
+text.ja {
+  font-size: 28px;
+}
+text.ko {
+  font-size: 24px;
 }
 text.line_name {
   font-family: NanumSquareBold;
-  font-size: 70px;
+  font-size: 50px;
+  text-anchor: middle;
+}
+text.line_name_sub {
+  font-family: NanumSquareBold;
+  font-size: 30px;
+  text-anchor: middle;
+  fill: #212121;
 }
 text.title {
   text-anchor: start;
   font-family: NanumSquareExtraBold;
-  font-size: 200px;
+  font-size: 100px;
 }
 polygon.index {
   stroke-width: 10px;
@@ -65,203 +75,447 @@ text.index {
 <body bgcolor=#FFFFFF>
 <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
 <div>
-<svg width="200%" viewBox="0 0 3000 2500" id="map">
+<svg width="100%" viewBox="0 0 3000 2500" id="map">
+
+<text x="50" y="100" class="title">오사카메트로 노선도</text>
 
 <!-- 미도스지선 -->
+<text x="850" y="300" style="fill:#DC270B;" class="line_name">미도스지선</text>
+<text x="2550" y="2400" style="fill:#DC270B;" class="line_name">미도스지선</text>
 <polyline points="
     1000,300 1000,1400 1200,1600 1700,1600 1800,1700 1800,2000 2200,2400 2400,2400
-	" fill="none" stroke="#DC270B" />
-<line x1="1000" y1="100" x2="1000" y2="300" stroke="#DC270B" style="stroke-width:11;"/>
+	" fill="none" stroke="#DC270B"></polyline>
+<line x1="1000" y1="100" x2="1000" y2="300" stroke="#0E0D7275" style="stroke-width:11;"></line>
+<text x="1000" y="200" class="line_name_sub">키타오사카 급행전철 난보쿠선</text>
+
 <!-- 츄오선 -->
+<text x="100" y="1150" style="fill:#00A63D;" class="line_name">츄오선</text>
+<text x="2900" y="1200" style="fill:#00A63D;" class="line_name">츄오선</text>
 <polyline points="
     100,1300 400,1000 2600,1000 2700,1100 2700,1200
-	" fill="none" stroke="#00A63D" />
-<line x1="2700" y1="1200" x2="2700" y2="1400" stroke="#00A63D" style="stroke-width:11;"/>
+	" fill="none" stroke="#00A63D"></polyline>
+<line x1="2700" y1="1200" x2="2700" y2="1400" stroke="#7ABE4B75" style="stroke-width:11;"></line>
+<text x="2700" y="1300" class="line_name_sub">킨테츠 케이한나선</text>
+
 <!-- 요츠바시선 -->
+<text x="800" y="650" style="fill:#0074BE;" class="line_name">요츠바시선</text>
+<text x="1050" y="1900" style="fill:#0074BE;" class="line_name">요츠바시선</text>
 <polyline points="
     900,700 900,900 1000,1000 900,1100 900,1200 1000,1300 1000,1400 900,1500 900,2000
-	" fill="none" stroke="#0074BE" />
+	" fill="none" stroke="#0074BE"></polyline>
+
 <!-- 센니치마에선 -->
+<text x="500" y="750" style="fill:#EC75A9;" class="line_name">센니치마에선</text>
+<text x="2700" y="1800" style="fill:#EC75A9;" class="line_name">센니치마에선</text>
 <polyline points="
     600,800 600,900 700,1000 600,1100 600,1200 700,1300 2400,1300 2700,1600 2700,1700
-	" fill="none" stroke="#EC75A9" />
+	" fill="none" stroke="#EC75A9"></polyline>
+
 <!-- 사카이스지선 -->
+<text x="1650" y="620" style="fill:#B34422;" class="line_name">사카이스지선</text>
+<text x="1400" y="1830" style="fill:#B34422;" class="line_name">사카이스지선</text>
 <polyline points="
     1400,500 1400,1700
-	" fill="none" stroke="#B34422" />
-<line x1="1400" y1="100" x2="1400" y2="500" stroke="#B34422" style="stroke-width:11;"/>
-<line x1="1600" y1="100" x2="1400" y2="300" stroke="#B34422" style="stroke-width:11;"/>
+	" fill="none" stroke="#B34422"></polyline>
+<line x1="1400" y1="100" x2="1400" y2="500" stroke="#34B58075" style="stroke-width:11;"></line>
+<line x1="1600" y1="100" x2="1400" y2="300" stroke="#34B58075" style="stroke-width:11;"></line>
+<text x="1400" y="400" class="line_name_sub">한큐 센리선</text>
+<text x="1500" y="200" class="line_name_sub">한큐 교토 본선</text>
+
 <!-- 나가호리츠루미료쿠치선 -->
+<text x="600" y="1430" style="fill:#BCD400;" class="line_name">나가호리</text>
+<text x="600" y="1490" style="fill:#BCD400;" class="line_name">츠루미료쿠치선</text>
+<text x="2800" y="240" style="fill:#BCD400;" class="line_name">나가호리</text>
+<text x="2800" y="300" style="fill:#BCD400;" class="line_name">츠루미료쿠치선</text>
 <polyline points="
     400,1400 400,1300 600,1100 2100,1100 2200,1000 2200,900 2400,700 2600,700 2900,400
-	" fill="none" stroke="#BCD400" />
+	" fill="none" stroke="#BCD400"></polyline>
+
 <!-- 타니마치선 -->
+<text x="2600" y="50" style="fill:#AB1C87;" class="line_name">타니마치선</text>
+<text x="2800" y="2140" style="fill:#AB1C87;" class="line_name">타니마치선</text>
 <polyline points="
     2600,100 2200,500 1300,500 1200,600 1200,700 1300,800 1700,800 1800,900 1800,1200 1700,1300 1700,1700 1800,1800 2100,1800 2500,2200 2900,2200
-	" fill="none" stroke="#AB1C87" />
+	" fill="none" stroke="#AB1C87"></polyline>
+
 <!-- 이마자토스지선 -->
+<text x="1850" y="300" style="fill:#F5A000;" class="line_name">이마자토스지선</text>
+<text x="2200" y="1230" style="fill:#F5A000;" class="line_name">이마자토스지선</text>
 <polyline points="
     1900,200 2300,200 2400,300 2400,1300
-	" fill="none" stroke="#F5A000" />
+	" fill="none" stroke="#F5A000"></polyline>
+
 <!-- 난코포크타운선 -->
+<text x="500" y="1600" style="fill:#00A7E3;" class="line_name">난코포크타운선</text>
+<text x="800" y="2150" style="fill:#00A7E3;" class="line_name">난코포크타운선</text>
 <polyline points="
     100,1300 100,1600 500,2000 900,2000
-	" fill="none" stroke="#00A7E3" />
+	" fill="none" stroke="#00A7E3"></polyline>
+
+
+<circle cx="1000" cy="100" r="11" onclick="onIconClicked('千里中央', '센리츄오');"></circle>
+<text x="1020" y="100" onclick="onTextClicked('千里中央', '센리츄오');" class="left ja">千里中央</text>
+<text x="1020" y="130" onclick="onTextClicked('千里中央', '센리츄오');" class="left ko">센리츄오</text>
+
+<circle cx="1000" cy="300" r="11" onclick="onIconClicked('江坂', '히가시미쿠니');"></circle>
+<text x="1020" y="300" onclick="onTextClicked('江坂', '히가시미쿠니');" class="left ja">江坂</text>
+<text x="1020" y="330" onclick="onTextClicked('江坂', '히가시미쿠니');" class="left ko">히가시미쿠니</text>
+<circle cx="1000" cy="400" r="11" onclick="onIconClicked('新大阪', '신오사카');"></circle>
+<text x="1020" y="400" onclick="onTextClicked('新大阪', '신오사카');" class="left ja">新大阪</text>
+<text x="1020" y="430" onclick="onTextClicked('新大阪', '신오사카');" class="left ko">신오사카</text>
+<circle cx="1000" cy="500" r="11" onclick="onIconClicked('西中島南方', '니시나카지마미나미가타');"></circle>
+<text x="980" y="500" onclick="onTextClicked('西中島南方', '니시나카지마미나미가타');" class="right ja">西中島南方</text>
+<text x="980" y="530" onclick="onTextClicked('西中島南方', '니시나카지마미나미가타');" class="right ko">니시나카지마미나미가타</text>
+<circle cx="1000" cy="600" r="11" onclick="onIconClicked('中津', '나카츠');"></circle>
+<text x="1020" y="600" onclick="onTextClicked('中津', '나카츠');" class="left ja">中津</text>
+<text x="1020" y="630" onclick="onTextClicked('中津', '나카츠');" class="left ko">나카츠</text>
+<circle cx="1000" cy="700" r="11" onclick="onIconClicked('梅田', '우메다');"></circle>
+<text x="1020" y="700" onclick="onTextClicked('梅田', '우메다');" class="left ja">梅田</text>
+<text x="1020" y="730" onclick="onTextClicked('梅田', '우메다');" class="left ko">우메다</text>
+<circle cx="1000" cy="900" r="11" onclick="onIconClicked('淀屋橋', '요도야바시');"></circle>
+<text x="1020" y="900" onclick="onTextClicked('淀屋橋', '요도야바시');" class="left ja">淀屋橋</text>
+<text x="1020" y="870" onclick="onTextClicked('淀屋橋', '요도야바시');" class="left ko">요도야바시</text>
+<circle cx="1000" cy="1000" r="15" onclick="onIconClicked('本町', '혼마치');"></circle>
+<text x="1020" y="970" onclick="onTextClicked('本町', '혼마치');" class="left ja">本町</text>
+<text x="1020" y="940" onclick="onTextClicked('本町', '혼마치');" class="left ko">혼마치</text>
+<circle cx="1000" cy="1100" r="15" onclick="onIconClicked('心斎橋', '신사이바시');"></circle>
+<text x="1020" y="1130" onclick="onTextClicked('心斎橋', '신사이바시');" class="left ja">心斎橋</text>
+<text x="1020" y="1160" onclick="onTextClicked('心斎橋', '신사이바시');" class="left ko">신사이바시</text>
+<circle cx="1000" cy="1300" r="15" onclick="onIconClicked('なんば', '난바');"></circle>
+<text x="1020" y="1270" onclick="onTextClicked('なんば', '난바');" class="left ja">なんば</text>
+<text x="1020" y="1240" onclick="onTextClicked('なんば', '난바');" class="left ko">난바</text>
+<circle cx="1000" cy="1400" r="15" onclick="onIconClicked('大国町', '다이코쿠쵸');"></circle>
+<text x="1020" y="1390" onclick="onTextClicked('大国町', '다이코쿠쵸');" class="left ja">大国町</text>
+<text x="1020" y="1360" onclick="onTextClicked('大国町', '다이코쿠쵸');" class="left ko">다이코쿠쵸</text>
+<circle cx="1400" cy="1600" r="15" onclick="onIconClicked('動物園前', '도부츠엔마에');"></circle>
+<text x="1420" y="1570" onclick="onTextClicked('動物園前', '도부츠엔마에');" class="left ja">動物園前</text>
+<text x="1420" y="1540" onclick="onTextClicked('動物園前', '도부츠엔마에');" class="left ko">도부츠엔마에</text>
+<circle cx="1700" cy="1600" r="15" onclick="onIconClicked('天王寺', '텐노지');"></circle>
+<text x="1720" y="1590" onclick="onTextClicked('天王寺', '텐노지');" class="left ja">天王寺</text>
+<text x="1720" y="1560" onclick="onTextClicked('天王寺', '텐노지');" class="left ko">텐노지</text>
+<circle cx="1800" cy="1900" r="11" onclick="onIconClicked('昭和町', '쇼와쵸');"></circle>
+<text x="1820" y="1900" onclick="onTextClicked('昭和町', '쇼와쵸');" class="left ja">昭和町</text>
+<text x="1820" y="1930" onclick="onTextClicked('昭和町', '쇼와쵸');" class="left ko">쇼와쵸</text>
+<circle cx="1800" cy="2000" r="11" onclick="onIconClicked('西田辺', '니시타나베');"></circle>
+<text x="1780" y="2000" onclick="onTextClicked('西田辺', '니시타나베');" class="right ja">西田辺</text>
+<text x="1780" y="2030" onclick="onTextClicked('西田辺', '니시타나베');" class="right ko">니시타나베</text>
+<circle cx="1900" cy="2100" r="11" onclick="onIconClicked('長居', '나가이');"></circle>
+<text x="1880" y="2110" onclick="onTextClicked('長居', '나가이');" class="right ja">長居</text>
+<text x="1880" y="2140" onclick="onTextClicked('長居', '나가이');" class="right ko">나가이</text>
+<circle cx="2000" cy="2200" r="11" onclick="onIconClicked('あびこ', '아비코');"></circle>
+<text x="1980" y="2210" onclick="onTextClicked('あびこ', '아비코');" class="right ja">あびこ</text>
+<text x="1980" y="2240" onclick="onTextClicked('あびこ', '아비코');" class="right ko">아비코</text>
+<circle cx="2100" cy="2300" r="11" onclick="onIconClicked('北花田', '키타하나다');"></circle>
+<text x="2080" y="2310" onclick="onTextClicked('北花田', '키타하나다');" class="right ja">北花田</text>
+<text x="2080" y="2340" onclick="onTextClicked('北花田', '키타하나다');" class="right ko">키타하나다</text>
+<circle cx="2200" cy="2400" r="11" onclick="onIconClicked('新金岡', '신카나오카');"></circle>
+<text x="2200" y="2440" onclick="onTextClicked('新金岡', '신카나오카');" class="middle ja">新金岡</text>
+<text x="2200" y="2470" onclick="onTextClicked('新金岡', '신카나오카');" class="middle ko">신카나오카</text>
+<circle cx="2400" cy="2400" r="11" onclick="onIconClicked('なかもず', '나카모즈');"></circle>
+<text x="2400" y="2440" onclick="onTextClicked('なかもず', '나카모즈');" class="middle ja">なかもず</text>
+<text x="2400" y="2470" onclick="onTextClicked('なかもず', '나카모즈');" class="middle ko">나카모즈</text>
+
+<circle cx="100" cy="1300" r="15" onclick="onIconClicked('コスモスクエア', '코스모스퀘어');"></circle>
+<text x="120" y="1310" onclick="onTextClicked('コスモスクエア', '코스모스퀘어');" class="left ja">コスモスクエア</text>
+<text x="120" y="1340" onclick="onTextClicked('コスモスクエア', '코스모스퀘어');" class="left ko">코스모스퀘어</text>
+<circle cx="200" cy="1200" r="11" onclick="onIconClicked('大阪港', '오사카항');"></circle>
+<text x="220" y="1210" onclick="onTextClicked('大阪港', '오사카항');" class="left ja">大阪港</text>
+<text x="220" y="1240" onclick="onTextClicked('大阪港', '오사카항');" class="left ko">오사카항</text>
+<circle cx="300" cy="1100" r="11" onclick="onIconClicked('朝潮橋', '아사시오바시');"></circle>
+<text x="320" y="1110" onclick="onTextClicked('朝潮橋', '아사시오바시');" class="left ja">朝潮橋</text>
+<text x="320" y="1140" onclick="onTextClicked('朝潮橋', '아사시오바시');" class="left ko">아사시오바시</text>
+<circle cx="400" cy="1000" r="11" onclick="onIconClicked('弁天町', '벤텐초');"></circle>
+<text x="380" y="990" onclick="onTextClicked('弁天町', '벤텐초');" class="right ja">弁天町</text>
+<text x="380" y="960" onclick="onTextClicked('弁天町', '벤텐초');" class="right ko">벤텐초</text>
+<circle cx="500" cy="1000" r="11" onclick="onIconClicked('九条', '쿠조');"></circle>
+<text x="500" y="1040" onclick="onTextClicked('九条', '쿠조');" class="middle ja">九条</text>
+<text x="500" y="1070" onclick="onTextClicked('九条', '쿠조');" class="middle ko">쿠조</text>
+<circle cx="700" cy="1000" r="15" onclick="onIconClicked('阿波座', '아와자');"></circle>
+<text x="710" y="960" onclick="onTextClicked('阿波座', '아와자');" class="left ja">阿波座</text>
+<text x="710" y="930" onclick="onTextClicked('阿波座', '아와자');" class="left ko">아와자</text>
+<circle cx="1400" cy="1000" r="15" onclick="onIconClicked('堺筋本町', '사카이스지혼마치');"></circle>
+<text x="1380" y="970" onclick="onTextClicked('堺筋本町', '사카이스지혼마치');" class="right ja">堺筋本町</text>
+<text x="1380" y="940" onclick="onTextClicked('堺筋本町', '사카이스지혼마치');" class="right ko">사카이스지혼마치</text>
+<circle cx="1800" cy="1000" r="15" onclick="onIconClicked('谷町四丁目', '타니마치욘초메');"></circle>
+<text x="1780" y="960" onclick="onTextClicked('谷町四丁目', '타니마치욘초메');" class="right ja">谷町四丁目</text>
+<text x="1780" y="930" onclick="onTextClicked('谷町四丁目', '타니마치욘초메');" class="right ko">타니마치욘초메</text>
+<circle cx="2200" cy="1000" r="15" onclick="onIconClicked('森ノ宮', '모리노미야');"></circle>
+<text x="2210" y="1030" onclick="onTextClicked('森ノ宮', '모리노미야');" class="left ja">森ノ宮</text>
+<text x="2210" y="1060" onclick="onTextClicked('森ノ宮', '모리노미야');" class="left ko">모리노미야</text>
+<circle cx="2400" cy="1000" r="15" onclick="onIconClicked('緑橋', '미도리바시');"></circle>
+<text x="2420" y="1040" onclick="onTextClicked('緑橋', '미도리바시');" class="left ja">緑橋</text>
+<text x="2420" y="1070" onclick="onTextClicked('緑橋', '미도리바시');" class="left ko">미도리바시</text>
+<circle cx="2600" cy="1000" r="11" onclick="onIconClicked('深江橋', '후카에바시');"></circle>
+<text x="2600" y="960" onclick="onTextClicked('深江橋', '후카에바시');" class="middle ja">深江橋</text>
+<text x="2600" y="930" onclick="onTextClicked('深江橋', '후카에바시');" class="middle ko">후카에바시</text>
+<circle cx="2700" cy="1100" r="11" onclick="onIconClicked('高井田', '타카이다');"></circle>
+<text x="2720" y="1100" onclick="onTextClicked('高井田', '타카이다');" class="left ja">高井田</text>
+<text x="2720" y="1130" onclick="onTextClicked('高井田', '타카이다');" class="left ko">타카이다</text>
+<circle cx="2700" cy="1200" r="11" onclick="onIconClicked('長田', '나가타');"></circle>
+<text x="2720" y="1200" onclick="onTextClicked('長田', '나가타');" class="left ja">長田</text>
+<text x="2720" y="1230" onclick="onTextClicked('長田', '나가타');" class="left ko">나가타</text>
+<circle cx="2700" cy="1400" r="11" onclick="onIconClicked('学研奈良登美ヶ丘', '갓켄나라토미가오카');"></circle>
+<text x="2720" y="1400" onclick="onTextClicked('学研奈良登美ヶ丘', '갓켄나라토미가오카');" class="left ja">学研奈良登美ヶ丘</text>
+<text x="2720" y="1430" onclick="onTextClicked('学研奈良登美ヶ丘', '갓켄나라토미가오카');" class="left ko">갓켄나라토미가오카</text>
+
+<circle cx="900" cy="700" r="11" onclick="onIconClicked('西梅田', '니시우메다');"></circle>
+<text x="880" y="700" onclick="onTextClicked('西梅田', '니시우메다');" class="right ja">西梅田</text>
+<text x="880" y="730" onclick="onTextClicked('西梅田', '니시우메다');" class="right ko">니시우메다</text>
+<circle cx="900" cy="800" r="11" onclick="onIconClicked('肥後橋', '히고바시');"></circle>
+<text x="880" y="800" onclick="onTextClicked('肥後橋', '히고바시');" class="right ja">肥後橋</text>
+<text x="880" y="830" onclick="onTextClicked('肥後橋', '히고바시');" class="right ko">히고바시</text>
+<circle cx="900" cy="1200" r="11" onclick="onIconClicked('四ツ橋', '요츠바시');"></circle>
+<text x="880" y="1200" onclick="onTextClicked('四ツ橋', '요츠바시');" class="right ja">四ツ橋</text>
+<text x="880" y="1230" onclick="onTextClicked('四ツ橋', '요츠바시');" class="right ko">요츠바시</text>
+<circle cx="900" cy="1600" r="11" onclick="onIconClicked('花園町', '하나조노초');"></circle>
+<text x="880" y="1600" onclick="onTextClicked('花園町', '하나조노초');" class="right ja">花園町</text>
+<text x="880" y="1630" onclick="onTextClicked('花園町', '하나조노초');" class="right ko">하나조노초</text>
+<circle cx="900" cy="1700" r="11" onclick="onIconClicked('岸里', '키시노사토');"></circle>
+<text x="880" y="1700" onclick="onTextClicked('岸里', '키시노사토');" class="right ja">岸里</text>
+<text x="880" y="1730" onclick="onTextClicked('岸里', '키시노사토');" class="right ko">키시노사토</text>
+<circle cx="900" cy="1800" r="11" onclick="onIconClicked('玉出', '타마데');"></circle>
+<text x="880" y="1800" onclick="onTextClicked('玉出', '타마데');" class="right ja">玉出</text>
+<text x="880" y="1830" onclick="onTextClicked('玉出', '타마데');" class="right ko">타마데</text>
+<circle cx="900" cy="1900" r="11" onclick="onIconClicked('北加賀屋', '키타카가야');"></circle>
+<text x="880" y="1900" onclick="onTextClicked('北加賀屋', '키타카가야');" class="right ja">北加賀屋</text>
+<text x="880" y="1930" onclick="onTextClicked('北加賀屋', '키타카가야');" class="right ko">키타카가야</text>
+<circle cx="900" cy="2000" r="15" onclick="onIconClicked('肥後橋', '스미노에코엔');"></circle>
+<text x="920" y="2000" onclick="onTextClicked('肥後橋', '스미노에코엔');" class="left ja">肥後橋</text>
+<text x="920" y="2030" onclick="onTextClicked('肥後橋', '스미노에코엔');" class="left ko">스미노에코엔</text>
+
+<circle cx="600" cy="800" r="11" onclick="onIconClicked('野田阪神', '노다한신');"></circle>
+<text x="580" y="800" onclick="onTextClicked('野田阪神', '노다한신');" class="right ja">野田阪神</text>
+<text x="580" y="830" onclick="onTextClicked('野田阪神', '노다한신');" class="right ko">노다한신</text>
+<circle cx="600" cy="900" r="11" onclick="onIconClicked('玉川', '타마가와');"></circle>
+<text x="580" y="900" onclick="onTextClicked('玉川', '타마가와');" class="right ja">玉川</text>
+<text x="580" y="930" onclick="onTextClicked('玉川', '타마가와');" class="right ko">타마가와</text>
+<circle cx="600" cy="1100" r="15" onclick="onIconClicked('西長堀', '니시나가호리');"></circle>
+<text x="620" y="1130" onclick="onTextClicked('西長堀', '니시나가호리');" class="left ja">西長堀</text>
+<text x="620" y="1160" onclick="onTextClicked('西長堀', '니시나가호리');" class="left ko">니시나가호리</text>
+<circle cx="700" cy="1300" r="11" onclick="onIconClicked('桜川', '사쿠라가와');"></circle>
+<text x="700" y="1340" onclick="onTextClicked('桜川', '사쿠라가와');" class="middle ja">桜川</text>
+<text x="700" y="1370" onclick="onTextClicked('桜川', '사쿠라가와');" class="middle ko">사쿠라가와</text>
+<circle cx="1400" cy="1300" r="15" onclick="onIconClicked('日本橋', '닛폰바시');"></circle>
+<text x="1420" y="1270" onclick="onTextClicked('日本橋', '닛폰바시');" class="left ja">日本橋</text>
+<text x="1420" y="1240" onclick="onTextClicked('日本橋', '닛폰바시');" class="left ko">닛폰바시</text>
+<circle cx="1700" cy="1300" r="15" onclick="onIconClicked('谷町九丁目', '타니마치큐초메');"></circle>
+<text x="1680" y="1340" onclick="onTextClicked('谷町九丁目', '타니마치큐초메');" class="right ja">谷町九丁目</text>
+<text x="1680" y="1370" onclick="onTextClicked('谷町九丁目', '타니마치큐초메');" class="right ko">타니마치큐초메</text>
+<circle cx="2100" cy="1300" r="11" onclick="onIconClicked('鶴橋', '츠루하시');"></circle>
+<text x="2100" y="1340" onclick="onTextClicked('鶴橋', '츠루하시');" class="middle ja">鶴橋</text>
+<text x="2100" y="1370" onclick="onTextClicked('鶴橋', '츠루하시');" class="middle ko">츠루하시</text>
+<circle cx="2400" cy="1300" r="15" onclick="onIconClicked('今里', '이마자토');"></circle>
+<text x="2390" y="1340" onclick="onTextClicked('今里', '이마자토');" class="right ja">今里</text>
+<text x="2390" y="1370" onclick="onTextClicked('今里', '이마자토');" class="right ko">이마자토</text>
+<circle cx="2500" cy="1400" r="11" onclick="onIconClicked('新深江', '신후카에');"></circle>
+<text x="2480" y="1410" onclick="onTextClicked('新深江', '신후카에');" class="right ja">新深江</text>
+<text x="2480" y="1440" onclick="onTextClicked('新深江', '신후카에');" class="right ko">신후카에</text>
+<circle cx="2600" cy="1500" r="11" onclick="onIconClicked('小路', '쇼지');"></circle>
+<text x="2580" y="1510" onclick="onTextClicked('小路', '쇼지');" class="right ja">小路</text>
+<text x="2580" y="1540" onclick="onTextClicked('小路', '쇼지');" class="right ko">쇼지</text>
+<circle cx="2700" cy="1600" r="11" onclick="onIconClicked('北巽', '키타타츠미');"></circle>
+<text x="2720" y="1600" onclick="onTextClicked('北巽', '키타타츠미');" class="left ja">北巽</text>
+<text x="2720" y="1630" onclick="onTextClicked('北巽', '키타타츠미');" class="left ko">키타타츠미</text>
+<circle cx="2700" cy="1700" r="11" onclick="onIconClicked('南巽', '미나미타츠미');"></circle>
+<text x="2720" y="1700" onclick="onTextClicked('南巽', '미나미타츠미');" class="left ja">南巽</text>
+<text x="2720" y="1730" onclick="onTextClicked('南巽', '미나미타츠미');" class="left ko">미나미타츠미</text>
+
+<circle cx="1400" cy="100" r="11" onclick="onIconClicked('北千里', '키타센리');"></circle>
+<text x="1420" y="100" onclick="onTextClicked('北千里', '키타센리');" class="left ja">北千里</text>
+<text x="1420" y="130" onclick="onTextClicked('北千里', '키타센리');" class="left ko">키타센리</text>
+<circle cx="1600" cy="100" r="11" onclick="onIconClicked('京都河原町', '교토카와라마치');"></circle>
+<text x="1620" y="100" onclick="onTextClicked('京都河原町', '교토카와라마치');" class="left ja">京都河原町</text>
+<text x="1620" y="130" onclick="onTextClicked('京都河原町', '교토카와라마치');" class="left ko">교토카와라마치</text>
+<circle cx="1400" cy="300" r="15" onclick="onIconClicked('淡路', '아와지');"></circle>
+<text x="1420" y="310" onclick="onTextClicked('淡路', '아와지');" class="left ja">淡路</text>
+<text x="1420" y="340" onclick="onTextClicked('淡路', '아와지');" class="left ko">아와지</text>
+
+<circle cx="1400" cy="500" r="15" onclick="onIconClicked('天神橋筋六丁目', '텐진바시스지로쿠초메');"></circle>
+<text x="1380" y="470" onclick="onTextClicked('天神橋筋六丁目', '텐진바시스지로쿠초메');" class="right ja">天神橋筋六丁目</text>
+<text x="1380" y="440" onclick="onTextClicked('天神橋筋六丁目', '텐진바시스지로쿠초메');" class="right ko">텐진바시스지로쿠초메</text>
+<circle cx="1400" cy="600" r="11" onclick="onIconClicked('扇町', '오기마치');"></circle>
+<text x="1420" y="600" onclick="onTextClicked('扇町', '오기마치');" class="left ja">扇町</text>
+<text x="1420" y="630" onclick="onTextClicked('扇町', '오기마치');" class="left ko">오기마치</text>
+<circle cx="1400" cy="800" r="15" onclick="onIconClicked('南森町', '미나미모리마치');"></circle>
+<text x="1420" y="770" onclick="onTextClicked('南森町', '미나미모리마치');" class="left ja">南森町</text>
+<text x="1420" y="740" onclick="onTextClicked('南森町', '미나미모리마치');" class="left ko">미나미모리마치</text>
+<circle cx="1400" cy="900" r="11" onclick="onIconClicked('北浜', '키타하마');"></circle>
+<text x="1420" y="900" onclick="onTextClicked('北浜', '키타하마');" class="left ja">北浜</text>
+<text x="1420" y="930" onclick="onTextClicked('北浜', '키타하마');" class="left ko">키타하마</text>
+<circle cx="1400" cy="1100" r="15" onclick="onIconClicked('長堀橋', '나가호리바시');"></circle>
+<text x="1380" y="1140" onclick="onTextClicked('長堀橋', '나가호리바시');" class="right ja">長堀橋</text>
+<text x="1380" y="1170" onclick="onTextClicked('長堀橋', '나가호리바시');" class="right ko">나가호리바시</text>
+<circle cx="1400" cy="1400" r="11" onclick="onIconClicked('恵美須町', '에비스쵸');"></circle>
+<text x="1380" y="1400" onclick="onTextClicked('恵美須町', '에비스쵸');" class="right ja">恵美須町</text>
+<text x="1380" y="1430" onclick="onTextClicked('恵美須町', '에비스쵸');" class="right ko">에비스쵸</text>
+<circle cx="1400" cy="1700" r="11" onclick="onIconClicked('天下茶屋', '텐가차야');"></circle>
+<text x="1400" y="1740" onclick="onTextClicked('天下茶屋', '텐가차야');" class="middle ja">天下茶屋</text>
+<text x="1400" y="1770" onclick="onTextClicked('天下茶屋', '텐가차야');" class="middle ko">텐가차야</text>
+
+<circle cx="2600" cy="100" r="11" onclick="onIconClicked('大日', '다이니치');"></circle>
+<text x="2620" y="100" onclick="onTextClicked('大日', '다이니치');" class="left ja">大日</text>
+<text x="2620" y="130" onclick="onTextClicked('大日', '다이니치');" class="left ko">다이니치</text>
+<circle cx="2500" cy="200" r="11" onclick="onIconClicked('守口', '모리구치');"></circle>
+<text x="2520" y="210" onclick="onTextClicked('守口', '모리구치');" class="left ja">守口</text>
+<text x="2520" y="240" onclick="onTextClicked('守口', '모리구치');" class="left ko">모리구치</text>
+<circle cx="2400" cy="300" r="15" onclick="onIconClicked('太子橋今市', '타이시바시이마이치');"></circle>
+<text x="2420" y="310" onclick="onTextClicked('太子橋今市', '타이시바시이마이치');" class="left ja">太子橋今市</text>
+<text x="2420" y="340" onclick="onTextClicked('太子橋今市', '타이시바시이마이치');" class="left ko">타이시바시이마이치</text>
+<circle cx="2200" cy="500" r="11" onclick="onIconClicked('千林大宮', '센바야시오미야');"></circle>
+<text x="2200" y="540" onclick="onTextClicked('千林大宮', '센바야시오미야');" class="middle ja">千林大宮</text>
+<text x="2200" y="570" onclick="onTextClicked('千林大宮', '센바야시오미야');" class="middle ko">센바야시오미야</text>
+<circle cx="2000" cy="500" r="11" onclick="onIconClicked('関目高殿', '세키메타카도노');"></circle>
+<text x="2000" y="460" onclick="onTextClicked('関目高殿', '세키메타카도노');" class="middle ja">関目高殿</text>
+<text x="2000" y="430" onclick="onTextClicked('関目高殿', '세키메타카도노');" class="middle ko">세키메타카도노</text>
+<circle cx="1800" cy="500" r="11" onclick="onIconClicked('野江内代', '노에우친다이');"></circle>
+<text x="1800" y="540" onclick="onTextClicked('野江内代', '노에우친다이');" class="middle ja">野江内代</text>
+<text x="1800" y="570" onclick="onTextClicked('野江内代', '노에우친다이');" class="middle ko">노에우친다이</text>
+<circle cx="1600" cy="500" r="11" onclick="onIconClicked('都島', '미야코지마');"></circle>
+<text x="1600" y="460" onclick="onTextClicked('都島', '미야코지마');" class="middle ja">都島</text>
+<text x="1600" y="430" onclick="onTextClicked('都島', '미야코지마');" class="middle ko">미야코지마</text>
+<circle cx="1200" cy="600" r="11" onclick="onIconClicked('中崎町', '나카자키초');"></circle>
+<text x="1180" y="600" onclick="onTextClicked('中崎町', '나카자키초');" class="right ja">中崎町</text>
+<text x="1180" y="570" onclick="onTextClicked('中崎町', '나카자키초');" class="right ko">나카자키초</text>
+<circle cx="1200" cy="700" r="11" onclick="onIconClicked('東梅田', '히가시우메다');"></circle>
+<text x="1220" y="690" onclick="onTextClicked('東梅田', '히가시우메다');" class="left ja">東梅田</text>
+<text x="1220" y="660" onclick="onTextClicked('東梅田', '히가시우메다');" class="left ko">히가시우메다</text>
+<circle cx="1700" cy="800" r="11" onclick="onIconClicked('天満橋', '텐마바시');"></circle>
+<text x="1720" y="800" onclick="onTextClicked('天満橋', '텐마바시');" class="left ja">天満橋</text>
+<text x="1720" y="770" onclick="onTextClicked('天満橋', '텐마바시');" class="left ko">텐마바시</text>
+<circle cx="1700" cy="1400" r="11" onclick="onIconClicked('四天王寺前夕陽ヶ丘', '시텐노지마에유히가오카');"></circle>
+<text x="1720" y="1400" onclick="onTextClicked('四天王寺前夕陽ヶ丘', '시텐노지마에유히가오카');" class="left ja">四天王寺前夕陽ヶ丘</text>
+<text x="1720" y="1430" onclick="onTextClicked('四天王寺前夕陽ヶ丘', '시텐노지마에유히가오카');" class="left ko">시텐노지마에유히가오카</text>
+<circle cx="1700" cy="1700" r="11" onclick="onIconClicked('阿倍野', '아베노');"></circle>
+<text x="1680" y="1700" onclick="onTextClicked('阿倍野', '아베노');" class="right ja">阿倍野</text>
+<text x="1680" y="1730" onclick="onTextClicked('阿倍野', '아베노');" class="right ko">아베노</text>
+<circle cx="1900" cy="1800" r="11" onclick="onIconClicked('文の里', '후미노사토');"></circle>
+<text x="1900" y="1760" onclick="onTextClicked('文の里', '후미노사토');" class="middle ja">文の里</text>
+<text x="1900" y="1730" onclick="onTextClicked('文の里', '후미노사토');" class="middle ko">후미노사토</text>
+<circle cx="2100" cy="1800" r="11" onclick="onIconClicked('田辺', '타나베');"></circle>
+<text x="2100" y="1760" onclick="onTextClicked('田辺', '타나베');" class="middle ja">田辺</text>
+<text x="2100" y="1730" onclick="onTextClicked('田辺', '타나베');" class="middle ko">타나베</text>
+<circle cx="2200" cy="1900" r="11" onclick="onIconClicked('駒川中野', '코마가와나카노');"></circle>
+<text x="2180" y="1910" onclick="onTextClicked('駒川中野', '코마가와나카노');" class="right ja">駒川中野</text>
+<text x="2180" y="1940" onclick="onTextClicked('駒川中野', '코마가와나카노');" class="right ko">코마가와나카노</text>
+<circle cx="2300" cy="2000" r="11" onclick="onIconClicked('平野', '히라노');"></circle>
+<text x="2280" y="2010" onclick="onTextClicked('平野', '히라노');" class="right ja">平野</text>
+<text x="2280" y="2040" onclick="onTextClicked('平野', '히라노');" class="right ko">히라노</text>
+<circle cx="2400" cy="2100" r="11" onclick="onIconClicked('喜連瓜破', '키레우리와리');"></circle>
+<text x="2380" y="2110" onclick="onTextClicked('喜連瓜破', '키레우리와리');" class="right ja">喜連瓜破</text>
+<text x="2380" y="2140" onclick="onTextClicked('喜連瓜破', '키레우리와리');" class="right ko">키레우리와리</text>
+<circle cx="2500" cy="2200" r="11" onclick="onIconClicked('出戸', '데토');"></circle>
+<text x="2500" y="2240" onclick="onTextClicked('出戸', '데토');" class="middle ja">出戸</text>
+<text x="2500" y="2270" onclick="onTextClicked('出戸', '데토');" class="middle ko">데토</text>
+<circle cx="2700" cy="2200" r="11" onclick="onIconClicked('長原', '나가하라');"></circle>
+<text x="2700" y="2240" onclick="onTextClicked('長原', '나가하라');" class="middle ja">長原</text>
+<text x="2700" y="2270" onclick="onTextClicked('長原', '나가하라');" class="middle ko">나가하라</text>
+<circle cx="2900" cy="2200" r="11" onclick="onIconClicked('八尾南', '야오미나미');"></circle>
+<text x="2900" y="2240" onclick="onTextClicked('八尾南', '야오미나미');" class="middle ja">八尾南</text>
+<text x="2900" y="2270" onclick="onTextClicked('八尾南', '야오미나미');" class="middle ko">야오미나미</text>
+
+<circle cx="400" cy="1400" r="11" onclick="onIconClicked('大正', '타이쇼');"></circle>
+<text x="420" y="1400" onclick="onTextClicked('大正', '타이쇼');" class="left ja">大正</text>
+<text x="420" y="1430" onclick="onTextClicked('大正', '타이쇼');" class="left ko">타이쇼</text>
+<circle cx="400" cy="1300" r="11" onclick="onIconClicked('ドーム前千代崎', '돔마에치요자키');"></circle>
+<text x="420" y="1310" onclick="onTextClicked('ドーム前千代崎', '돔마에치요자키');" class="left ja">ドーム前千代崎</text>
+<text x="420" y="1340" onclick="onTextClicked('ドーム前千代崎', '돔마에치요자키');" class="left ko">돔마에치요자키</text>
+<circle cx="800" cy="1100" r="11" onclick="onIconClicked('西大橋', '니시나가호리');"></circle>
+<text x="800" y="1070" onclick="onTextClicked('西大橋', '니시나가호리');" class="middle ja">西大橋</text>
+<text x="800" y="1040" onclick="onTextClicked('西大橋', '니시나가호리');" class="middle ko">니시나가호리</text>
+<circle cx="1600" cy="1100" r="11" onclick="onIconClicked('松屋町', '마츠야마치');"></circle>
+<text x="1600" y="1140" onclick="onTextClicked('松屋町', '마츠야마치');" class="middle ja">松屋町</text>
+<text x="1600" y="1170" onclick="onTextClicked('松屋町', '마츠야마치');" class="middle ko">마츠야마치</text>
+<circle cx="1800" cy="1100" r="15" onclick="onIconClicked('谷町六丁目', '타니마치로쿠초메');"></circle>
+<text x="1820" y="1140" onclick="onTextClicked('谷町六丁目', '타니마치로쿠초메');" class="left ja">谷町六丁目</text>
+<text x="1820" y="1170" onclick="onTextClicked('谷町六丁目', '타니마치로쿠초메');" class="left ko">타니마치로쿠초메</text>
+<circle cx="2100" cy="1100" r="11" onclick="onIconClicked('玉造', '타마츠쿠리');"></circle>
+<text x="2120" y="1110" onclick="onTextClicked('玉造', '타마츠쿠리');" class="left ja">玉造</text>
+<text x="2120" y="1140" onclick="onTextClicked('玉造', '타마츠쿠리');" class="left ko">타마츠쿠리</text>
+<circle cx="2200" cy="900" r="11" onclick="onIconClicked('大阪ビジネスパーク', '오사카 비즈니스파크');"></circle>
+<text x="2180" y="900" onclick="onTextClicked('大阪ビジネスパーク', '오사카 비즈니스파크');" class="right ja">大阪ビジネスパーク</text>
+<text x="2180" y="930" onclick="onTextClicked('大阪ビジネスパーク', '오사카 비즈니스파크');" class="right ko">오사카 비즈니스파크</text>
+<circle cx="2300" cy="800" r="11" onclick="onIconClicked('京橋', '쿄바시');"></circle>
+<text x="2280" y="790" onclick="onTextClicked('京橋', '쿄바시');" class="right ja">京橋</text>
+<text x="2280" y="760" onclick="onTextClicked('京橋', '쿄바시');" class="right ko">쿄바시</text>
+<circle cx="2400" cy="700" r="15" onclick="onIconClicked('蒲生四丁目', '가모욘초메');"></circle>
+<text x="2380" y="690" onclick="onTextClicked('蒲生四丁目', '가모욘초메');" class="right ja">蒲生四丁目</text>
+<text x="2380" y="660" onclick="onTextClicked('蒲生四丁目', '가모욘초메');" class="right ko">가모욘초메</text>
+<circle cx="2600" cy="700" r="11" onclick="onIconClicked('今福鶴見', '이마후쿠츠루미');"></circle>
+<text x="2600" y="740" onclick="onTextClicked('今福鶴見', '이마후쿠츠루미');" class="middle ja">今福鶴見</text>
+<text x="2600" y="770" onclick="onTextClicked('今福鶴見', '이마후쿠츠루미');" class="middle ko">이마후쿠츠루미</text>
+<circle cx="2700" cy="600" r="11" onclick="onIconClicked('横堤', '요코즈츠미');"></circle>
+<text x="2720" y="610" onclick="onTextClicked('横堤', '요코즈츠미');" class="left ja">横堤</text>
+<text x="2720" y="640" onclick="onTextClicked('横堤', '요코즈츠미');" class="left ko">요코즈츠미</text>
+<circle cx="2800" cy="500" r="11" onclick="onIconClicked('鶴見緑地', '츠루미료쿠치');"></circle>
+<text x="2820" y="510" onclick="onTextClicked('鶴見緑地', '츠루미료쿠치');" class="left ja">鶴見緑地</text>
+<text x="2820" y="540" onclick="onTextClicked('鶴見緑地', '츠루미료쿠치');" class="left ko">츠루미료쿠치</text>
+<circle cx="2900" cy="400" r="11" onclick="onIconClicked('門真南', '카도마미나미');"></circle>
+<text x="2880" y="390" onclick="onTextClicked('門真南', '카도마미나미');" class="right ja">門真南</text>
+<text x="2880" y="360" onclick="onTextClicked('門真南', '카도마미나미');" class="right ko">카도마미나미</text>
+
+<circle cx="1900" cy="200" r="11" onclick="onIconClicked('井高野', '이타카노');"></circle>
+<text x="1900" y="160" onclick="onTextClicked('井高野', '이타카노');" class="middle ja">井高野</text>
+<text x="1900" y="130" onclick="onTextClicked('井高野', '이타카노');" class="middle ko">이타카노</text>
+<circle cx="2100" cy="200" r="11" onclick="onIconClicked('瑞光四丁目', '즈이코욘초메');"></circle>
+<text x="2100" y="240" onclick="onTextClicked('瑞光四丁目', '즈이코욘초메');" class="middle ja">瑞光四丁目</text>
+<text x="2100" y="270" onclick="onTextClicked('瑞光四丁目', '즈이코욘초메');" class="middle ko">즈이코욘초메</text>
+<circle cx="2300" cy="200" r="11" onclick="onIconClicked('だいどう豊里', '다이도토요사토');"></circle>
+<text x="2300" y="160" onclick="onTextClicked('だいどう豊里', '다이도토요사토');" class="middle ja">だいどう豊里</text>
+<text x="2300" y="130" onclick="onTextClicked('だいどう豊里', '다이도토요사토');" class="middle ko">다이도토요사토</text>
+<circle cx="2400" cy="400" r="11" onclick="onIconClicked('清水', '시미즈');"></circle>
+<text x="2420" y="400" onclick="onTextClicked('清水', '시미즈');" class="left ja">清水</text>
+<text x="2420" y="430" onclick="onTextClicked('清水', '시미즈');" class="left ko">시미즈</text>
+<circle cx="2400" cy="500" r="11" onclick="onIconClicked('新森古市', '신모리후루이치');"></circle>
+<text x="2420" y="500" onclick="onTextClicked('新森古市', '신모리후루이치');" class="left ja">新森古市</text>
+<text x="2420" y="530" onclick="onTextClicked('新森古市', '신모리후루이치');" class="left ko">신모리후루이치</text>
+<circle cx="2400" cy="600" r="11" onclick="onIconClicked('関目成育', '세키메세이이쿠');"></circle>
+<text x="2420" y="600" onclick="onTextClicked('関目成育', '세키메세이이쿠');" class="left ja">関目成育</text>
+<text x="2420" y="630" onclick="onTextClicked('関目成育', '세키메세이이쿠');" class="left ko">세키메세이이쿠</text>
+<circle cx="2400" cy="900" r="11" onclick="onIconClicked('鴫野', '시기노');"></circle>
+<text x="2420" y="900" onclick="onTextClicked('鴫野', '시기노');" class="left ja">鴫野</text>
+<text x="2420" y="930" onclick="onTextClicked('鴫野', '시기노');" class="left ko">시기노</text>
+
+<circle cx="100" cy="1400" r="11" onclick="onIconClicked('トレードセンター前', '트레이드센터마에');"></circle>
+<text x="120" y="1400" onclick="onTextClicked('トレードセンター前', '트레이드센터마에');" class="left ja">トレードセンター前</text>
+<text x="120" y="1430" onclick="onTextClicked('トレードセンター前', '트레이드센터마에');" class="left ko">트레이드센터마에</text>
+<circle cx="100" cy="1500" r="11" onclick="onIconClicked('中ふ頭', '나카후토');"></circle>
+<text x="120" y="1500" onclick="onTextClicked('中ふ頭', '나카후토');" class="left ja">中ふ頭</text>
+<text x="120" y="1530" onclick="onTextClicked('中ふ頭', '나카후토');" class="left ko">나카후토</text>
+<circle cx="100" cy="1600" r="11" onclick="onIconClicked('ポートタウン西', '포트타운니시');"></circle>
+<text x="120" y="1590" onclick="onTextClicked('ポートタウン西', '포트타운니시');" class="left ja">ポートタウン西</text>
+<text x="120" y="1560" onclick="onTextClicked('ポートタウン西', '포트타운니시');" class="left ko">포트타운니시</text>
+<circle cx="200" cy="1700" r="11" onclick="onIconClicked('ポートタウン東', '포트타운히가시');"></circle>
+<text x="220" y="1690" onclick="onTextClicked('ポートタウン東', '포트타운히가시');" class="left ja">ポートタウン東</text>
+<text x="220" y="1660" onclick="onTextClicked('ポートタウン東', '포트타운히가시');" class="left ko">포트타운히가시</text>
+<circle cx="300" cy="1800" r="11" onclick="onIconClicked('フェリーターミナル', '페리터미널');"></circle>
+<text x="280" y="1810" onclick="onTextClicked('フェリーターミナル', '페리터미널');" class="right ja">フェリーターミナル</text>
+<text x="280" y="1840" onclick="onTextClicked('フェリーターミナル', '페리터미널');" class="right ko">페리터미널</text>
+<circle cx="400" cy="1900" r="11" onclick="onIconClicked('南港東', '난코히가시');"></circle>
+<text x="380" y="1910" onclick="onTextClicked('南港東', '난코히가시');" class="right ja">南港東</text>
+<text x="380" y="1940" onclick="onTextClicked('南港東', '난코히가시');" class="right ko">난코히가시</text>
+<circle cx="500" cy="2000" r="11" onclick="onIconClicked('南港口', '난코구치');"></circle>
+<text x="500" y="2040" onclick="onTextClicked('南港口', '난코구치');" class="middle ja">南港口</text>
+<text x="500" y="2070" onclick="onTextClicked('南港口', '난코구치');" class="middle ko">난코구치</text>
+<circle cx="700" cy="2000" r="11" onclick="onIconClicked('平林', '히라바야시');"></circle>
+<text x="700" y="2040" onclick="onTextClicked('平林', '히라바야시');" class="middle ja">平林</text>
+<text x="700" y="2070" onclick="onTextClicked('平林', '히라바야시');" class="middle ko">히라바야시</text>
+
+
+<!-- 저작권 표시 -->
+<text x=20 y=2440 class=left>이 벡터 이미지에는 네이버에서 제공한 나눔글꼴이 적용되어 있습니다.</text>
+<text x=20 y=2480 class='left bold'>© 2024 Dark Tornado, All rights reserved.</text>
 
 </svg>
 </div>
 
 <script>
-//x,y,ko,ja,dir
-//x,y,ko,dir
-var str = `
-1000,100,센리츄오,千里中央,left
-1000,300,히가시미쿠니,江坂,left
-1000,400,신오사카,新大阪,left
-1000,500,니시나카지마미나미가타,西中島南方,right
-1000,600,나카츠,中津,left
-1000,700,우메다,梅田,left
-1000,900,요도야바시,淀屋橋,left
-1000,1000,혼마치,本町,left
-1000,1100,신사이바시,心斎橋,left
-1000,1300,난바,なんば,left
-1000,1400,다이코쿠쵸,大国町,left
-1400,1600,도부츠엔마에,動物園前,right
-1700,1600,텐노지,天王寺,left
-1800,1900,쇼와쵸,昭和町,left
-1800,2000,니시타나베,西田辺,left
-1900,2100,나가이,長居,left
-2000,2200,아비코,あびこ,left
-2100,2300,키타하나다,北花田,left
-2200,2400,신카나오카,新金岡,down
-2400,2400,나카모즈,なかもず,down
 
-100,1300,코스모스퀘어,コスモスクエア,left
-200,1200,오사카항,大阪港,left
-300,1100,아사시오바시,朝潮橋,left
-400,1000,벤텐초,弁天町,right
-500,1000,쿠조,九条,down
-700,1000,아와자,阿波座,up
-1400,1000,사카이스지혼마치,堺筋本町,left
-1800,1000,타니마치욘초메,谷町四丁目,up
-2200,1000,모리노미야,森ノ宮,up
-2400,1000,미도리바시,緑橋,down
-2600,1000,후카에바시,深江橋,up
-2700,1100,타카이다,高井田,left
-2700,1200,나가타,長田,left
-
-900,700,니시우메다,西梅田,right
-900,800,히고바시,肥後橋,right
-900,1200,요츠바시,四ツ橋,right
-900,1600,하나조노초,花園町,right
-900,1700,키시노사토,岸里,right
-900,1800,타마데,玉出,right
-900,1900,키타카가야,北加賀屋,left
-900,2000,스미노에코엔,肥後橋,left
-
-600,800,노다한신,野田阪神,right
-600,900,타마가와,玉川,right
-600,1100,니시나가호리,西長堀,left
-700,1300,사쿠라가와,桜川,down
-1400,1300,닛폰바시,日本橋,left
-1700,1300,타니마치큐초메,谷町九丁目,left
-2100,1300,츠루하시,鶴橋,left
-2400,1300,이마자토,今里,left
-2500,1400,신후카에,新深江,left
-2600,1500,쇼지,小路,left
-2700,1600,키타타츠미,北巽,left
-2700,1700,미나미타츠미,南巽,left
-
-1400,100,키타센리,北千里,left
-1600,100,교토카와라마치,京都河原町,left
-1400,300,아와지,淡路,left
-1400,500,텐진바시스지로쿠초메,天神橋筋六丁目,left
-1400,700,오기마치,扇町,left
-1400,800,미나미모리마치,南森町,left
-1400,900,키타하마,北浜,left
-1400,1100,나가호리바시,長堀橋,left
-1400,1400,에비스쵸,恵美須町,left
-1400,1700,텐가차야,天下茶屋,right
-
-2600,100,다이니치,大日,left
-2500,200,모리구치,守口,left
-2400,300,타이시바시이마이치,太子橋今市,left
-2200,500,센바야시오미야,千林大宮,down
-2000,500,세키메타카도노,関目高殿,up
-1800,500,노에우친다이,野江内代,down
-1600,500,미야코지마,都島,up
-1200,600,나카자키초,中崎町,left
-1200,700,히가시우메다,東梅田,down
-1700,800,텐마바시,天満橋,left
-1700,1400,시텐노지마에유히가오카,四天王寺前夕陽ヶ丘,left
-1700,1700,아베노,阿倍野,right
-1900,1800,후미노사토,文の里,up
-2100,1800,타나베,田辺,up
-2200,1900,코마가와나카노,駒川中野,left
-2300,2000,히라노,平野,left
-2400,2100,키레우리와리,喜連瓜破,left
-2500,2200,데토,出戸,down
-2700,2200,나가하라,長原,down
-2900,2200,야오미나미,八尾南,down
-
-400,1300,돔마에치요자키,ドーム前千代崎,left
-400,1400,타이쇼,大正,left
-800,1100,니시나가호리,西大橋,down
-1600,1100,마츠야마치,松屋町,left
-1800,1100,타니마치로쿠초메,谷町六丁目,left
-2100,1100,타마츠쿠리,玉造,left
-2200,900,오사카 비즈니스파크,大阪ビジネスパーク,right
-2300,800,쿄바시,京橋,right
-2400,700,가모욘초메,蒲生四丁目,right
-2600,700,이마후쿠츠루미,今福鶴見,down
-2700,600,요코즈츠미,横堤,left
-2800,500,츠루미료쿠치,鶴見緑地,left
-2900,400,카도마미나미,門真南,right
-
-1900,200,이타카노,井高野,up
-2100,200,즈이코욘초메,瑞光四丁目,down
-2300,200,다이도토요사토,だいどう豊里,up
-2400,400,시미즈,清水,left
-2400,500,신모리후루이치,新森古市,left
-2400,600,세키메세이이쿠,関目成育,left
-2400,900,시기노,鴫野,left
-
-100,1400,트레이드센터마에,トレードセンター前,left
-100,1500,나카후토,中ふ頭,left
-100,1600,포트타운니시,ポートタウン西,left
-200,1700,포트타운히가시,ポートタウン東,left
-300,1800,페리터미널,フェリーターミナル,left
-400,1900,난코히가시,南港東,right
-500,2000,난코구치,南港口,up
-700,2000,히라바야시,平林,down
-
-`.trim().split("\n");
-var map = document.getElementById("map");
-var src = '';
-str.forEach((e) => {
-if (e.trim() == '') return;
-e = e.split(',');
-var x = e[0]-0;
-var y = e[1]-0;
-var ko = e[2];
-var ja = e[3];
-var dir = e[4];
-src += '<circle cx="' + x + '" cy="' + y + '" r="11" />';
-if (dir == 'left') x += 30;
-if (dir == 'right') x -= 30;
-if (dir == 'up') y -= 40;
-if (dir == 'down') y += 40;
-if (dir == 'up' || dir == 'down') dir = 'middle';
-src += '<text x=' + x + ' y=' + y + ' onClick="onTextClicked(this);" class=' + dir + '>' + ko + '</text>';
-});
-map.innerHTML += src;
-
-function onIconClicked(station) {
-alert('아이콘: ' + station);
+function onIconClicked(ja, ko) {
+alert('아이콘: ' + ja + ', ' + ko);
 }
 
-function onTextClicked(element) {
-alert('글자: ' + element.innerHTML.replace(/(<([^>]+)>)/g, ''));
+function onTextClicked(ja, ko) {
+alert('글자: ' + ja + ', ' + ko);
 }
 </script>
 </body>
